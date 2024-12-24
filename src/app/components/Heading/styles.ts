@@ -8,13 +8,8 @@ export const Container = styled(motion.div)`
   justify-content: space-around;
   align-items: center;
   
-  padding: 25px 100px;
+  padding: 20px 100px;
 
-  position: fixed;
-`;
-
-export const NavContainer = styled(motion.nav)`
-  
 `;
 
 export const NavLink = styled(motion.a)`

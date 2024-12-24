@@ -5,11 +5,11 @@ export default function Heading() {
     return (
         <S.Container>
             <Image src="/icon-aster-outlined.png" alt="Logo of developer" width={70} height={70}/>
-            <S.NavContainer>
+            <nav>
                 <S.NavLink href="">Home</S.NavLink>
                 <S.NavLink href="">About</S.NavLink>
                 <S.NavLink href="">Certifications</S.NavLink>
-            </S.NavContainer>             
+            </nav>             
         </S.Container>
     );
 }
