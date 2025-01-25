@@ -1,7 +1,7 @@
 import EventComponent from "../components/event";
 
-import EventStartImage from "../assets/images/1700194212386.jpeg"
-import EventJobImage from "../assets/images/1701126770283.jpeg"
+import EventJobImage from "../assets/images/1700194212386.jpeg"
+import EventStartImage from "../assets/images/1701126770283.jpeg"
 
 
 export default function TimelinePage() {
@@ -11,13 +11,13 @@ export default function TimelinePage() {
             <EventComponent
                 imageEvent={EventJobImage}
                 yearTitle="2023"
-                eventTitle="Desenvolvedor de Software com foco em Back-end na Accenture Brasil"
+                eventTitle="🧙🏼 Software Engineer com foco em Back-end na Accenture Brasil"
                 descriptionEvent="Início de carreira como desenvolvedor na multi-nacional Accenture Brasil."
             />
             <EventComponent 
                 imageEvent={EventStartImage}
                 yearTitle="2022"
-                eventTitle="Finalização e formação no programa START"
+                eventTitle="📕 Finalização e formação no programa START"
                 descriptionEvent="Participação e formação em um dos melhores cursos gratuitos de programação de Pernambuco."
             />
         </section>
