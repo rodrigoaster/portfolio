@@ -6,7 +6,7 @@ import LinkedinSvg from "../assets/svg/linkedin-white-icon.svg"
 
 export default function HomePage() {
     return (
-        <section className="mt-[4.5rem] grid grid-cols-2">
+        <section className="pt-[4.5rem] pb-[7.5rem] grid grid-cols-2">
             <div className="max-w-[30rem]">
                 <h1 className="text-6xl font-extrabold">Rodrigo Aster</h1>
                 <h2 className="text-2xl mt-3">Software Engineer</h2>

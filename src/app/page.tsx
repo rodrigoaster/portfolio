@@ -1,11 +1,15 @@
 import HeadingComponent from "./components/heading";
 import HomePage from "./pages/home";
+import TimelinePage from "./pages/timeline";
 
 export default function App() {
   return (
-    <main className="mx-auto max-w-[64rem]">
-      <HeadingComponent />
-      <HomePage />
+    <main>
+      <div className="max-w-[64rem] mx-auto">
+        <HeadingComponent />
+        <HomePage />
+      </div>
+      <TimelinePage />
     </main>
   );
 }

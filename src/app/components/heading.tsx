@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeadingComponent() {
     return (
-        <header className="flex justify-center py-8 max-w-[64rem]">
+        <header className="flex justify-center py-8 max-w-[64rem] mx-auto">
             <nav className="flex flex-1 items-center justify-between mx-auto">
                 <a href="/">
                     <Image className="hover:opacity-50 ease-in-out duration-300" src="/aster-icon.png" alt="Aster developer icon" width={60} height={65} />
