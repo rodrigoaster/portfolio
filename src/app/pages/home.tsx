@@ -18,7 +18,7 @@ export default function HomePage() {
                     <a className="mr-8 hover:opacity-50 ease-in-out duration-300" href="https://www.instagram.com/rodrigaster/" target="_blank">
                         <Image className="" src={InstagramSvg} alt="" width={25} height={25} />
                     </a>
-                    <a className="mr-8 hover:opacity-50 ease-in-out duration-300" href="https://x.com/rodrigaster" target="_blank">
+                    <a className="mr-8 hover:opacity-50 ease-in-out duration-300" href="https://x.com/rodrigoasterbr" target="_blank">
                         <Image className="" src={TwitterSvg} alt="" width={25} height={25} />
                     </a>
                     <a className="mr-8 hover:opacity-50 ease-in-out duration-300" href="https://www.linkedin.com/in/rodrigoaster/" target="_blank">
@@ -27,7 +27,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="">
-                <Image className="bg-[#0b0a0b] rounded-b-[10%] rounded-e-[10%] border border-t-1 border-l-1 border-r-0 border-b-0 border-[#8886866b]" src="/aster-photo.png" alt="" width={450} height={450}/>
+                <Image className="bg-[#0b0a0b] rounded-b-[10%] rounded-e-[10%] border border-t-1 border-l-1 border-r-0 border-b-0 border-[#8886866b]" src="/aster-profile.png" alt="" width={450} height={450}/>
             </div>
         </section>
     );
