@@ -16,7 +16,7 @@ export default function App() {
     <motion.main
       initial="first"
       whileInView="last"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={variantsSection}
       transition={{ type: "spring", stiffness: 50 }}
     >
