@@ -5,7 +5,7 @@ export function SocialIcon({
   icon,
 }: {
   href: string
-  icon: any
+  icon: string
 }) {
   return (
     <a

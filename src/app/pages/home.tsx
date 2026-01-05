@@ -7,12 +7,6 @@ import { SocialIcon } from "../components/social.icon";
 import { motion } from "motion/react";
 import { useIsMobile } from "../hooks/use.desktop.hook";
 
-const transition = {
-  duration: 0.8,
-  delay: 0.5,
-  ease: [0, 0.71, 0.2, 1.01],
-}
-
 export default function HomePage() {
     const isMobile = useIsMobile();
 

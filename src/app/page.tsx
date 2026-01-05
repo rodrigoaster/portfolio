@@ -1,8 +1,8 @@
 'use client'
 
 import HeadingComponent from "./components/heading";
-import HomePage from "./sections/home";
-import TimelinePage from "./sections/timeline";
+import HomePage from "./pages/home";
+import TimelinePage from "./pages/timeline";
 
 import { motion } from "motion/react"
 
