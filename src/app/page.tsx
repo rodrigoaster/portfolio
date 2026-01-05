@@ -1,8 +1,8 @@
 'use client'
 
 import HeadingComponent from "./components/heading";
-import HomePage from "./pages/home";
-import TimelinePage from "./pages/timeline";
+import HomePage from "./sections/home";
+import TimelinePage from "./sections/timeline";
 
 import { motion } from "motion/react"
 
@@ -19,8 +19,9 @@ export default function App() {
       viewport={{ once: true, amount: 0.2 }}
       variants={variantsSection}
       transition={{ type: "spring", stiffness: 50 }}
+      className="w-full overflow-x-hidden"
     >
-      <div className="max-w-[64rem] mx-auto">
+      <div className="w-full max-w-[64rem] mx-auto px-4 sm:px-6 lg:px-8">
         <HeadingComponent />
         <HomePage />
       </div>

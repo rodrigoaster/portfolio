@@ -1,12 +1,4 @@
-import * as React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-
+import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from "@mui/lab";
 import Image, { StaticImageData } from 'next/image';
 
 type EventComponentProps = {
@@ -16,7 +8,7 @@ type EventComponentProps = {
   descriptionEvent: string;
 }
 
-export default function EventComponent({ imageEvent, yearTitle, eventTitle, descriptionEvent }: EventComponentProps) {
+export default function DesktopTimeline({ imageEvent, yearTitle, eventTitle, descriptionEvent }: EventComponentProps) {
   return (
     <Timeline className='my-9' position="alternate">
       <TimelineItem className='max-w-[64rem] mx-auto'>
@@ -25,11 +17,16 @@ export default function EventComponent({ imageEvent, yearTitle, eventTitle, desc
           variant="body2"
           color="text.secondary"
         >
-          <Image className='w-[30.625rem] h-[21.875rem] rounded-3xl' src={imageEvent} alt='Group to developers.' />
+          <div className="relative">
+            <Image 
+              className='w-[30.625rem] h-[21.875rem] rounded-3xl' 
+              src={imageEvent} alt='Group to developers.' 
+              />
+          </div>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot 
-            sx={{ width: 20, height: 20, background: '#ff53d4'}} 
+            sx={{ width: 10, height: 10, background: '#FF1493'}} 
             color='secondary' 
           />
           <TimelineConnector />

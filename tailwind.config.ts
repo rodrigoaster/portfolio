@@ -13,6 +13,13 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    screens: {
+      sm_mobile: { max: "670px" },
+      mobile: { max: "767px" },
+      tablet: { min: "768px", max: "1024px" },
+      desktop: { min: "1024px" },
+      tablet_2: { raw: "(min-width: 768px) and (max-width: 1125px)" },
+    }
   },
   plugins: [],
 } satisfies Config;

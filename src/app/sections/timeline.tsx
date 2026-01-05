@@ -1,4 +1,4 @@
-import EventComponent from "../components/event";
+import EventComponent from "../components/event/event";
 
 import EventJobTwoImage from "../assets/images/1764966800734.jpg"
 import EventJobImage from "../assets/images/1700194212386.jpeg"

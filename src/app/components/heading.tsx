@@ -1,19 +1,74 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client"
+
+import { motion, useScroll, useMotionValueEvent } from "motion/react"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
+import { NavLink } from "./navlinks"
 
 export default function HeadingComponent() {
-    return (
-        <header className="flex justify-center py-8 max-w-[64rem] mx-auto">
-            <nav className="flex flex-1 items-center justify-between mx-auto">
-                <Link href="/">
-                    <Image className="hover:opacity-50 ease-in-out duration-300" src="/aster-icon.png" alt="Aster developer icon" width={60} height={65} />
-                </Link>
-                <div>
-                    <Link className="pr-12 text-xl hover:text-gray-500 ease-in-out duration-300" href="/">Home</Link>
-                    <Link className="pr-12 text-xl hover:text-gray-500 ease-in-out duration-300" href="/about">Sobre</Link>
-                    <Link className="pr-12 text-xl hover:text-gray-500 ease-in-out duration-300" href="/certifications">Certificações</Link>
-                </div>
-            </nav>
-        </header>
-    );
+  const { scrollY } = useScroll()
+  const pathname = usePathname()
+  const [scrolled, setScrolled] = useState(false)
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 0)
+  })
+
+  return (
+    <motion.header
+      layout="size"
+      animate={{
+        height: scrolled ? "4.5rem" : "6.5rem",
+        backdropFilter: scrolled ? "blur(14px)" : "blur(0px)",
+        backgroundColor: scrolled
+          ? "rgba(11, 10, 11, 0.65)"
+          : "rgba(11, 10, 11, 0)",
+      }}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className={`
+        ${scrolled ? "fixed top-0 left-0 right-0 z-50" : "relative"}
+        flex
+        justify-center
+        border-b
+        border-white/10
+      `}
+    >
+      <motion.nav
+        layout
+        className="
+          flex
+          flex-1
+          items-center
+          justify-between
+          max-w-[64rem]
+          px-4
+          alternativeWidth:px-16
+        "
+      >
+        <Link href="/">
+          <Image
+            src="/aster-icon.png"
+            alt="Aster developer icon"
+            width={50}
+            height={55}
+            className="hover:opacity-50 transition-opacity duration-300"
+          />
+        </Link>
+
+        <div className="flex gap-12">
+          <NavLink href="/" pathname={pathname}>
+            Home
+          </NavLink>
+          <NavLink href="/about" pathname={pathname}>
+            Sobre
+          </NavLink>
+          <NavLink href="/certifications" pathname={pathname}>
+            Certificações
+          </NavLink>
+        </div>
+      </motion.nav>
+    </motion.header>
+  )
 }
