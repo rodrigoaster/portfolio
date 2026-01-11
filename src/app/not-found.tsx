@@ -1,4 +1,3 @@
-// app/not-found.tsx
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -6,7 +5,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="text-center">
         <div className="text-6xl mb-6">🚧</div>
-        <h1 className="text-7xl font-bold text-white mb-4">Em Construção</h1>
+        <h1 className="text-5xl font-bold text-white mb-4">Em Construção</h1>
         <h2 className="text-2xl font-semibold text-gray-300 mb-4">
           Esta página ainda está sendo desenvolvida
         </h2>
