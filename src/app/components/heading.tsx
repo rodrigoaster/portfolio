@@ -57,7 +57,7 @@ export default function HeadingComponent() {
           />
         </Link>
 
-        <div className="flex gap-12">
+        <div className="flex gap-12 sm_mobile:gap-6 text-lg font-medium">
           <NavLink href="/" pathname={pathname}>
             Home
           </NavLink>
