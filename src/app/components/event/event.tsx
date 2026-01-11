@@ -3,7 +3,7 @@ import * as React from 'react';
 import { StaticImageData } from 'next/image';
 import DesktopTimeline from './desktop.timeline';
 import MobileTimeline from './mobile.timeline';
-import { useIsDesktop } from '@/app/hooks/use.desktop.hook';
+import { useIsDesktop } from '@/app/hooks/usedesktop.hook';
 
 type EventComponentProps = {
   imageEvent: StaticImageData;

@@ -61,11 +61,11 @@ export default function HeadingComponent() {
           <NavLink href="/" pathname={pathname}>
             Home
           </NavLink>
+          <NavLink href="/projects" pathname={pathname}>
+            Projetos
+          </NavLink>
           <NavLink href="/about" pathname={pathname}>
             Sobre
-          </NavLink>
-          <NavLink href="/certifications" pathname={pathname}>
-            Certificações
           </NavLink>
         </div>
       </motion.nav>

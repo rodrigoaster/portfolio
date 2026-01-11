@@ -1,10 +1,9 @@
 'use client'
 
 import HeadingComponent from "./components/heading";
-import HomePage from "./pages/home";
-import TimelinePage from "./pages/timeline";
 
 import { motion } from "motion/react"
+import HomePage from "./home/page";
 
 const variantsSection = {
   first: { opacity: 0 },
@@ -25,7 +24,6 @@ export default function App() {
         <HeadingComponent />
         <HomePage />
       </div>
-      <TimelinePage />
-    </motion.main>
+=    </motion.main>
   );
 }
