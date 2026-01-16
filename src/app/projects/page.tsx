@@ -7,7 +7,7 @@ const projects = [
     title: "Landing Page de Geração de Leads (GA4 + GTM)",
     description: "Landing page otimizada para conversão, com botões de WhatsApp e Ligação integrados a um sistema completo de tracking usando Google Tag Manager e Google Analytics 4. O projeto mede leads em tempo real e está pronto para campanhas de Google Ads.",
     image: CardLPG.src,
-    link: "https://exemplo.com/landing-leads"
+    link: "https://lpl-convertion.netlify.app/"
   }
 ];
 
