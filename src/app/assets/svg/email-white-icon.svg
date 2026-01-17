@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none" role="img" aria-label="Ícone de envelope de e-mail">
+  <rect x="1.5" y="7" width="39" height="28" rx="4.5" stroke="#FFFFFF" stroke-width="4" fill="none"></rect>
+  <path d="M2.5 9.5l18.5 15 18.5-15" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M2.5 34l13-11" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M39.5 34l-13-11" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

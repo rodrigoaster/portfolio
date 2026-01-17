@@ -7,6 +7,8 @@ import Image from "next/image";
 import InstagramSvg from "./assets/svg/instagram-white-icon.svg"
 import TwitterSvg from "./assets/svg/twitter-white-icon.svg"
 import LinkedinSvg from "./assets/svg/linkedin-white-icon.svg"
+import MailSvg from "./assets/svg/email-white-icon.svg"
+
 
 import EventJobTwoImage from "./assets/images/1764966800734.jpg"
 import EventJobImage from "./assets/images/1700194212386.jpeg"
@@ -101,6 +103,12 @@ export default function App() {
           />
         </section>
       </div>
+      <footer className="flex p-10 justify-center">
+          <SocialIcon href="https://www.instagram.com/rodrigaster/" icon={InstagramSvg} />
+          <SocialIcon href="https://x.com/rodrigoasterbr" icon={TwitterSvg} />
+          <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={LinkedinSvg} />
+          <SocialIcon href="mailto:rodrigoasterdev@gmail.com" icon={MailSvg} />
+      </footer>
     </motion.main>
   );
 }
