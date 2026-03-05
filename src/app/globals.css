@@ -4,15 +4,52 @@
 
 :root {
   --background: #000101;
+  --surface: #0b0a0b;
+  --surface-soft: #0a0b0b;
   --foreground: #ededed;
+  --muted: #98a2b3;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #60a5fa;
+  --timeline-year: #aa52dd;
+  --timeline-dot: #ff1493;
+  --header-bg: rgba(11, 10, 11, 0.65);
+}
+
+:root[data-theme="light"] {
+  --background: #f5f7fb;
+  --surface: #ffffff;
+  --surface-soft: #eef2f8;
+  --foreground: #101828;
+  --muted: #475467;
+  --border: rgba(16, 24, 40, 0.14);
+  --accent: #2563eb;
+  --timeline-year: #7c3aed;
+  --timeline-dot: #2563eb;
+  --header-bg: rgba(255, 255, 255, 0.72);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .MuiTimelineItem-root::before {
   content: none;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  background: var(--surface);
+  border-radius: 9999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.875rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
 }

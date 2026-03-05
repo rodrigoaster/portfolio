@@ -6,6 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { NavLink } from "./navlinks"
+import ThemeToggle from "./theme.toggle"
 
 export default function HeadingComponent() {
   const { scrollY } = useScroll()
@@ -23,8 +24,8 @@ export default function HeadingComponent() {
         height: scrolled ? "4.5rem" : "6.5rem",
         backdropFilter: scrolled ? "blur(14px)" : "blur(0px)",
         backgroundColor: scrolled
-          ? "rgba(11, 10, 11, 0.65)"
-          : "rgba(11, 10, 11, 0)",
+          ? "var(--header-bg)"
+          : "transparent",
       }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`
@@ -32,32 +33,34 @@ export default function HeadingComponent() {
         flex
         justify-center
         border-b
-        border-white/10
+        border-[color:var(--border)]
       `}
     >
       <motion.nav
         layout
         className="
-          flex
+          grid
+          grid-cols-3
           flex-1
           items-center
-          justify-between
           max-w-[64rem]
           px-4
           alternativeWidth:px-16
         "
       >
-        <Link href="/">
-          <Image
-            src="/aster-icon.png"
-            alt="Aster developer icon"
-            width={50}
-            height={55}
-            className="hover:opacity-50 transition-opacity duration-300"
-          />
-        </Link>
+        <div className="justify-self-start">
+          <Link href="/">
+            <Image
+              src="/aster-icon.png"
+              alt="Aster developer icon"
+              width={50}
+              height={55}
+              className="hover:opacity-50 transition-opacity duration-300"
+            />
+          </Link>
+        </div>
 
-        <div className="flex gap-12 sm_mobile:gap-6 text-lg font-medium">
+        <div className="justify-self-center flex gap-12 sm_mobile:gap-6 text-lg font-medium">
           <NavLink href="/" pathname={pathname}>
             Home
           </NavLink>
@@ -67,6 +70,10 @@ export default function HeadingComponent() {
           <NavLink href="/about" pathname={pathname}>
             Sobre
           </NavLink>
+        </div>
+
+        <div className="justify-self-end">
+          <ThemeToggle />
         </div>
       </motion.nav>
     </motion.header>

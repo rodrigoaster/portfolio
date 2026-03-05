@@ -8,6 +8,10 @@ import InstagramSvg from "./assets/svg/instagram-white-icon.svg"
 import TwitterSvg from "./assets/svg/twitter-white-icon.svg"
 import LinkedinSvg from "./assets/svg/linkedin-white-icon.svg"
 import MailSvg from "./assets/svg/email-white-icon.svg"
+import InstagramBlackSvg from "./assets/svg/instagram-black-icon.svg"
+import TwitterBlackSvg from "./assets/svg/twitter-black-icon.svg"
+import LinkedinBlackSvg from "./assets/svg/linkedin-black-icon.svg"
+import MailBlackSvg from "./assets/svg/email-black-icon.svg"
 
 
 import EventJobTwoImage from "./assets/images/1764966800734.jpg"
@@ -18,6 +22,7 @@ import { SocialIcon } from "./components/social.icon";
 import { useIsMobile } from "./hooks/usedesktop.hook";
 import EventComponent from "./components/event/event";
 import HeadingComponent from "./components/heading";
+import { useTheme } from "./providers/theme.provider";
 
 const variantsSection = {
   first: { opacity: 0 },
@@ -26,6 +31,12 @@ const variantsSection = {
 
 export default function App() {
   const isMobile = useIsMobile();
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+  const instagramIcon = isDarkTheme ? InstagramSvg : InstagramBlackSvg;
+  const twitterIcon = isDarkTheme ? TwitterSvg : TwitterBlackSvg;
+  const linkedinIcon = isDarkTheme ? LinkedinSvg : LinkedinBlackSvg;
+  const mailIcon = isDarkTheme ? MailSvg : MailBlackSvg;
 
   return (
     <motion.main
@@ -42,14 +53,14 @@ export default function App() {
           <div className="max-w-[30rem] mobile:max-w-full mobile:text-center mobile:mx-auto">
             <h1 className="text-6xl font-extrabold tablet:text-4xl mobile:text-5xl sm:text-4xl">Rodrigo Aster</h1>
             <h2 className="text-2xl mt-3 tablet:text-xl mobile:text-2xl sm:text-xl">Software Engineer</h2>
-            <div className="max-w-[23rem] mt-9 text-[#888686] tracking-[0.025rem] font-normal mobile:max-w-full mobile:text-base sm:text-sm">
+            <div className="max-w-[23rem] mt-9 text-[var(--muted)] tracking-[0.025rem] font-normal mobile:max-w-full mobile:text-base sm:text-sm">
               <p className="text-[1.375rem] mobile:text-lg sm:text-base">Compartilhando meu conhecimento como Web Engineer.</p>
               <p className="text-[1.375rem] mt-6 mobile:text-lg sm:text-base">Vamos falar sobre Arquitetura de Sistemas, Qualidade de Software e Experiências.</p>
             </div>
             <div className="flex items-center mt-16 mobile:justify-center">
-              <SocialIcon href="https://www.instagram.com/rodrigoasterdev/" icon={InstagramSvg} />
-              <SocialIcon href="https://x.com/verseaster" icon={TwitterSvg} />
-              <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={LinkedinSvg} />
+              <SocialIcon href="https://www.instagram.com/rodrigoasterdev/" icon={instagramIcon} />
+              <SocialIcon href="https://x.com/verseaster" icon={twitterIcon} />
+              <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={linkedinIcon} />
             </div>
           </div>
           {
@@ -66,7 +77,7 @@ export default function App() {
                   sizes="(max-width: 768px) 100vw, 480px"
                   className="
                         object-cover
-                        bg-[#0b0a0b]
+                        bg-[var(--surface)]
                         rounded-b-[10%]
                         rounded-e-[10%]
                         border
@@ -74,14 +85,14 @@ export default function App() {
                         border-l
                         border-r-0
                         border-b-0
-                        border-[#8886866b]
+                        border-[color:var(--border)]
                         "
                 />
               </motion.div>
             ) : <div />
           }
         </section>
-        <section className="bg-[#0a0b0b] flex flex-col justify-center text-center pt-[6rem] mx-auto border border-b-0 border-r-0 border-l-0 border-t-[#37415179]">
+        <section className="bg-[var(--surface-soft)] flex flex-col justify-center text-center pt-[6rem] mx-auto border border-b-0 border-r-0 border-l-0 border-t-[color:var(--border)]">
           <h3 className="text-[3rem] font-bold tracking-[-1.2px] mb-16">Timeline</h3>
           <EventComponent
             imageEvent={EventJobTwoImage}
@@ -104,10 +115,10 @@ export default function App() {
         </section>
       </div>
       <footer className="flex p-10 justify-center">
-          <SocialIcon href="https://www.instagram.com/rodrigoasterdev/" icon={InstagramSvg} />
-          <SocialIcon href="https://x.com/verseaster" icon={TwitterSvg} />
-          <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={LinkedinSvg} />
-          <SocialIcon href="mailto:rodrigoasterdev@gmail.com" icon={MailSvg} />
+          <SocialIcon href="https://www.instagram.com/rodrigoasterdev/" icon={instagramIcon} />
+          <SocialIcon href="https://x.com/verseaster" icon={twitterIcon} />
+          <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={linkedinIcon} />
+          <SocialIcon href="mailto:rodrigoasterdev@gmail.com" icon={mailIcon} />
       </footer>
     </motion.main>
   );

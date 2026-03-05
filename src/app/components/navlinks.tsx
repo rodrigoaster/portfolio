@@ -15,13 +15,13 @@ export function NavLink({
   return (
     <motion.div
       animate={{
-        color: isActive ? "#ffffff" : "#7a7a7a",
+        color: isActive ? "var(--foreground)" : "var(--muted)",
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <Link
         href={href}
-        className="text-xl hover:text-white transition-colors duration-300 mobile:text-sm"
+        className="text-xl hover:opacity-80 transition-all duration-300 mobile:text-sm"
       >
         {children}
       </Link>

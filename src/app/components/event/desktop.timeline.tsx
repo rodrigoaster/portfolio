@@ -26,15 +26,15 @@ export default function DesktopTimeline({ imageEvent, yearTitle, eventTitle, des
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot 
-            sx={{ width: 10, height: 10, background: '#FF1493'}} 
+            sx={{ width: 10, height: 10, background: 'var(--timeline-dot)'}} 
             color='secondary' 
           />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <p className='text-[#aa52dd] font-normal'>{yearTitle}</p>
+          <p className='text-[var(--timeline-year)] font-normal'>{yearTitle}</p>
           <h1 className='mt-2 font-bold text-2xl'>{eventTitle}</h1>
-          <p className='text-[#666666] mt-16 text-[1.05rem]'>{descriptionEvent}</p>
+          <p className='text-[var(--muted)] mt-16 text-[1.05rem]'>{descriptionEvent}</p>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

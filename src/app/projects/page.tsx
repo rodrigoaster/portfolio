@@ -13,16 +13,16 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-[var(--background)]">
       <HeadingComponent />
-      <h1 className="font-bold text-center text-5xl py-9 text-white">Projetos</h1>
+      <h1 className="font-bold text-center text-5xl py-9 text-[var(--foreground)]">Projetos</h1>
       
       <div className="max-w-7xl mx-auto px-4 pb-16">
         <div className="grid grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 sm_mobile:grid-cols-1 gap-6">
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="bg-neutral-900 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 border border-gray-700"
+              className="bg-[var(--surface)] rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 border border-[color:var(--border)]"
             >
               <img 
                 src={project.image} 
@@ -30,17 +30,17 @@ export default function Projects() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h2 className="text-xl font-bold mb-2 text-white">
+                <h2 className="text-xl font-bold mb-2 text-[var(--foreground)]">
                   {project.title}
                 </h2>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                <p className="text-[var(--muted)] mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
                 <a 
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-colors duration-200 text-sm font-medium"
+                  className="inline-block bg-[var(--accent)] text-white px-6 py-2 rounded-md hover:opacity-90 transition-all duration-200 text-sm font-medium"
                 >
                   Acessar Projeto
                 </a>
