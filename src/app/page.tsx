@@ -47,8 +47,8 @@ export default function App() {
               <p className="text-[1.375rem] mt-6 mobile:text-lg sm:text-base">Vamos falar sobre Arquitetura de Sistemas, Qualidade de Software e Experiências.</p>
             </div>
             <div className="flex items-center mt-16 mobile:justify-center">
-              <SocialIcon href="https://www.instagram.com/rodrigaster/" icon={InstagramSvg} />
-              <SocialIcon href="https://x.com/rodrigoasterbr" icon={TwitterSvg} />
+              <SocialIcon href="https://www.instagram.com/rodrigoasterdev/" icon={InstagramSvg} />
+              <SocialIcon href="https://x.com/verseaster" icon={TwitterSvg} />
               <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={LinkedinSvg} />
             </div>
           </div>
@@ -104,8 +104,8 @@ export default function App() {
         </section>
       </div>
       <footer className="flex p-10 justify-center">
-          <SocialIcon href="https://www.instagram.com/rodrigaster/" icon={InstagramSvg} />
-          <SocialIcon href="https://x.com/rodrigoasterbr" icon={TwitterSvg} />
+          <SocialIcon href="https://www.instagram.com/rodrigoasterdev/" icon={InstagramSvg} />
+          <SocialIcon href="https://x.com/verseaster" icon={TwitterSvg} />
           <SocialIcon href="https://www.linkedin.com/in/rodrigoaster/" icon={LinkedinSvg} />
           <SocialIcon href="mailto:rodrigoasterdev@gmail.com" icon={MailSvg} />
       </footer>
