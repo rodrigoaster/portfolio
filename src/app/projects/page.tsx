@@ -1,5 +1,7 @@
 import HeadingComponent from "../components/heading"
 import CardLPG from "../assets/images/1700194212387.png"
+import CardHigher from "../assets/images/1700194212393.jpg"
+
 
 const projects = [
   {
@@ -8,6 +10,13 @@ const projects = [
     description: "Landing page otimizada para conversão, com botões de WhatsApp e Ligação integrados a um sistema completo de tracking usando Google Tag Manager e Google Analytics 4. O projeto mede leads em tempo real e está pronto para campanhas de Google Ads.",
     image: CardLPG.src,
     link: "https://lpl-convertion.netlify.app/"
+  },
+  {
+    id: 2,
+    title: "Higher App",
+    description: "Sistema de controle de hábitos, com interface gamificada, onde o usuário pode criar hábitos, marcar como feitos e acompanhar seu progresso ao longo do tempo.",
+    image: CardHigher.src,
+    link: "https://higherapp.com.br"
   }
 ];
 

@@ -17,6 +17,7 @@ import MailBlackSvg from "./assets/svg/email-black-icon.svg"
 import EventJobTwoImage from "./assets/images/1764966800734.jpg"
 import EventJobImage from "./assets/images/1700194212386.jpeg"
 import EventStartImage from "./assets/images/1701126770283.jpeg"
+import EventJobThreeImage from "./assets/images/1700194212392.jpeg"
 
 import { SocialIcon } from "./components/social.icon";
 import { useIsMobile } from "./hooks/usedesktop.hook";
@@ -95,10 +96,16 @@ export default function App() {
         <section className="bg-[var(--surface-soft)] flex flex-col justify-center text-center pt-[6rem] mx-auto border border-b-0 border-r-0 border-l-0 border-t-[color:var(--border)]">
           <h3 className="text-[3rem] font-bold tracking-[-1.2px] mb-16">Timeline</h3>
           <EventComponent
+            imageEvent={EventJobThreeImage}
+            yearTitle="2026"
+            eventTitle="🧙🏼 Desenvolvedor Pleno dentro da Accenture"
+            descriptionEvent="Após destaque e crescimento, promoção para cargo de desenvolvedor pleno dentro da Accenture Brasil, trzendo novas responsabilidades como liderança técnica e participação em projetos de maior complexidade."
+          />
+          <EventComponent
             imageEvent={EventJobTwoImage}
             yearTitle="2025"
-            eventTitle="🧙🏼 Assumindo cargo como Custom Software Engineer"
-            descriptionEvent="Novas responsabilidades em novo cargo."
+            eventTitle="🧙🏼 Assumindo cargo como Software Engineer Junior"
+            descriptionEvent="Novas responsabilidades em novo cargo dentro da Accenture, participando de projetos mais complexos e colaborando com equipes multidisciplinares para entregar soluções de alta qualidade."
           />
           <EventComponent
             imageEvent={EventJobImage}
