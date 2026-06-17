@@ -42,8 +42,7 @@ export default function App() {
   return (
     <motion.main
       initial="first"
-      whileInView="last"
-      viewport={{ once: true, amount: 0.2 }}
+      animate="last"
       variants={variantsSection}
       transition={{ type: "spring", stiffness: 50 }}
       className="w-full overflow-x-hidden"
