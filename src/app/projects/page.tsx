@@ -1,7 +1,7 @@
 import HeadingComponent from "../components/heading"
 import CardLPG from "../assets/images/1700194212387.png"
 import CardHigher from "../assets/images/1700194212393.jpg"
-
+import CardLandingLeeds from "../assets/images/17001942123811.png"
 
 const projects = [
   {
@@ -17,6 +17,13 @@ const projects = [
     description: "Sistema de controle de hábitos, com interface gamificada, onde o usuário pode criar hábitos, marcar como feitos e acompanhar seu progresso ao longo do tempo, além disso, também é possível criar grupos com seus amigos, onde vocês podem compartilhar seus hábitos e acompanhar o progresso uns dos outros, incentivando a motivação e a responsabilidade mútua.",
     image: CardHigher.src,
     link: "https://higherapp.com.br"
+  },
+  {
+    id: 3,
+    title: "Aster Templates Leeds",
+    description: "Aster Templates é um projeto de landing pages estáticas criado para gerar leads via WhatsApp de forma simples e direta. Ele reúne uma página principal de vendas, uma galeria de exemplos por segmento e templates prontos para áreas como médico, advogado, dentista, clínica, prestador de serviço e loja local. Todo o sistema foi desenvolvido com HTML, CSS e JavaScript puro, com foco em performance, personalização rápida e conversão, incluindo CTAs inteligentes, formulários que abrem o WhatsApp automaticamente e oferta de deploy como upgrade no funil comercial.",
+    image: CardLandingLeeds.src,
+    link: "https://astertemplates.vercel.app"
   }
 ];
 
