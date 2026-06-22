@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     title: "Higher App",
-    description: "Sistema de controle de hábitos, com interface gamificada, onde o usuário pode criar hábitos, marcar como feitos e acompanhar seu progresso ao longo do tempo.",
+    description: "Sistema de controle de hábitos, com interface gamificada, onde o usuário pode criar hábitos, marcar como feitos e acompanhar seu progresso ao longo do tempo, além disso, também é possível criar grupos com seus amigos, onde vocês podem compartilhar seus hábitos e acompanhar o progresso uns dos outros, incentivando a motivação e a responsabilidade mútua.",
     image: CardHigher.src,
     link: "https://higherapp.com.br"
   }
